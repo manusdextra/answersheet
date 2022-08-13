@@ -6,15 +6,7 @@ export const QuestionField = ({
   rightanswer,
   wronganswers,
 }: Question) => {
-  const allAnswers = [...wronganswers, rightanswer];
-  // const options = { rightanswer, ...wronganswers }.map((x) => (
-  //   <>
-  //     <input type="radio" id={x}>
-  //       {x}
-  //     </input>
-  //     <label htmlFor={x}>{x}</label>
-  //   </>
-  // ));
+  const allAnswers = [...wronganswers, rightanswer].sort(() => Math.random() - 0.5);
   const options = allAnswers.map((answer) => (
     <>
       <input type="radio" id={answer} name={question} />
