@@ -1,9 +1,8 @@
 import { Form } from "./components/Form";
 import type { Exam } from "./declarations";
-
 import "./App.css";
 // import * as mockexam from "./assets/mockexam.json";
-//
+
 const mockexam: Exam = [
   {
     id: 0,

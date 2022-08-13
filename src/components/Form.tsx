@@ -1,13 +1,12 @@
-import type { FormProps } from "../declarations";
+import type { Question, FormProps } from "../declarations";
+import { QuestionField } from "./QuestionField";
 
 export const Form = (props: FormProps) => {
   return (
     <>
-      <ul className={props.className}>
-        {props.data.map(({ id, question }) => (
-          <li key={id}>{question}</li>
-        ))}
-      </ul>
+      {props.data.map((question: Question) => (
+        <QuestionField {...question} />
+      ))}
     </>
   );
 };
