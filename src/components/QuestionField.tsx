@@ -17,7 +17,7 @@ export const QuestionField = ({
   // ));
   const options = allAnswers.map((answer) => (
     <>
-      <input type="radio" id={answer} />
+      <input type="radio" id={answer} name={question} />
       <label htmlFor={answer}>{answer}</label>
     </>
   ));
