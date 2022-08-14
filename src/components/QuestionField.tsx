@@ -14,7 +14,7 @@ export const QuestionField = ({
   return (
     <fieldset
       key={idString}
-      className="m-auto my-6 rounded-md bg-slate-50 shadow-lg sm:w-full md:w-[80vw]"
+      className="m-auto my-6 rounded-md bg-slate-50 shadow-lg sm:w-4/5 md:w-3/5"
     >
       <div className="text-md rounded-t-md bg-gray-100 py-4 text-center">
         <legend>{question}</legend>
