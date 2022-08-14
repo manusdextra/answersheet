@@ -1,6 +1,5 @@
 import { Form } from "./components/Form";
 import type { Exam } from "./declarations";
-import "./App.css";
 // import * as mockexam from "./assets/mockexam.json";
 
 const mockexam: Exam = [
@@ -26,9 +25,9 @@ const mockexam: Exam = [
 
 function App() {
   return (
-    <>
-      <Form className="Exam" data={mockexam} />
-    </>
+    <div className="flex-column min-h-screen bg-amber-100 pt-4">
+      <Form data={mockexam} />
+    </div>
   );
 }
 
