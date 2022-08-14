@@ -5,6 +5,11 @@ export type Question = {
   wronganswers: string[];
 };
 
+export type Answer = {
+  key: string;
+  optionText: string;
+};
+
 export type Exam = Question[];
 
 export type FormProps = {

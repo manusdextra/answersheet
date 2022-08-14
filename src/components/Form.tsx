@@ -5,7 +5,7 @@ export const Form = (props: FormProps) => {
   return (
     <form>
       {props.data.map((question: Question) => (
-        <QuestionField {...question} />
+        <QuestionField key={question.id.toString()} {...question} />
       ))}
     </form>
   );

@@ -25,7 +25,7 @@ const mockexam: Exam = [
 
 function App() {
   return (
-    <div className="flex-column min-h-screen bg-amber-100 pt-4">
+    <div className="flex-column min-h-screen bg-gradient-to-tl from-amber-100 to-amber-300 pt-4">
       <Form data={mockexam} />
     </div>
   );
