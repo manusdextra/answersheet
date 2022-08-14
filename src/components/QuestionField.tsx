@@ -21,7 +21,7 @@ export const QuestionField = ({
       </div>
       <div className="grid grid-flow-row p-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         {allAnswers.map((answer) => (
-          <AnswerField optionText={answer} key={answer} />
+          <AnswerField optionText={answer} key={answer} question={question} />
         ))}
       </div>
     </fieldset>

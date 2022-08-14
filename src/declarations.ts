@@ -7,6 +7,7 @@ export type Question = {
 
 export type Answer = {
   key: string;
+  question: string;
   optionText: string;
 };
 
