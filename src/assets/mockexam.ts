@@ -1,4 +1,4 @@
-import type { Exam } from "../declarations";
+import type { Exam } from "../declarations.d";
 
 export const mockexam: Exam = [
   {
