@@ -20,5 +20,4 @@ export type Exam = Question[];
 export type FormProps = {
   className?: string;
   data: Exam;
-  onSubmit: FormEventHandler;
 };
