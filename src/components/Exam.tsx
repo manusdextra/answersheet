@@ -37,7 +37,7 @@ export const Exam = () => {
                             className="peer flex-shrink appearance-none"
                             id={`q${question.id}-a${index}`}
                             value={`answer ${index + 1}`}
-                            name={`question ${question.id}`}
+                            name={`question ${question.id + 1}`}
                           />
                           <label
                             htmlFor={`q${question.id}-a${index}`}
