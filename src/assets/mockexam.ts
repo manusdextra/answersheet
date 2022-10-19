@@ -1,6 +1,6 @@
-import type { Exam } from "../declarations.d";
+import type { Question } from "../declarations.d";
 
-export const mockexam: Exam = [
+export const mockexam: Question[] = [
   {
     id: 0,
     question:
