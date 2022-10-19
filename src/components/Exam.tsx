@@ -4,7 +4,7 @@ import { mockexam } from "../assets/mockexam";
 
 const data = mockexam;
 
-let initials: any = {};
+let initials: { [key: string]: string } = {};
 for (const x of data) {
   initials[`question ${x.id + 1}`] = "";
 }
