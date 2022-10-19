@@ -5,6 +5,7 @@ export type Question = {
   question: string;
   rightanswer: string;
   wronganswers: string[];
+  allAnswers?: string[];
 };
 
 export type Answer = {
@@ -15,7 +16,7 @@ export type Answer = {
   onChange: any;
 };
 
-export type Exam = Question[];
+export type ExamAnswers = { [key: string]: string };
 
 export type FormProps = {
   className?: string;

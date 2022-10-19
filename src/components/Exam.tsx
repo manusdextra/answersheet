@@ -1,10 +1,10 @@
 import { Field, Form, Formik, FormikValues } from "formik";
-import type { Question } from "../declarations.d";
+import type { Question, ExamAnswers } from "../declarations.d";
 import { mockexam } from "../assets/mockexam";
 
 const data = mockexam;
 
-let initials: { [key: string]: string } = {};
+let initials: ExamAnswers = {};
 for (const x of data) {
   initials[`question ${x.id + 1}`] = "";
 }
