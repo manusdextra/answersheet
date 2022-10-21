@@ -19,8 +19,8 @@ export const QuestionField = (props: Question) => {
                 type="radio"
                 className="peer flex-shrink appearance-none"
                 id={`q${props.id}-a${index}`}
-                value={`answer ${index + 1}`}
-                name={`question ${props.id + 1}`}
+                value={`answer ${index}`}
+                name={`question ${props.id}`}
               />
               <label
                 htmlFor={`q${props.id}-a${index}`}

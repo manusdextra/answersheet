@@ -7,7 +7,7 @@ const data = mockexam;
 
 let initials: ExamAnswers = {};
 for (const x of data) {
-  initials[`question ${x.id + 1}`] = "";
+  initials[`question ${x.id}`] = "";
 }
 
 export const Exam = () => {
