@@ -12,13 +12,21 @@ for (const x of data) {
 
 export const Exam = () => {
   return (
-    <Formik
-      initialValues={initials}
-      onSubmit={(values) => alert(JSON.stringify(values, null, 2))}
-    >
-      {({ values }: FormikValues) => (
-        <Form>
-          <ul>
+    <ul>
+      <li
+        key="introduction"
+        className="m-auto my-4 w-4/5 rounded-md bg-slate-50 p-1 shadow-lg md:w-3/5"
+      >
+        <p className="text-md rounded-t-md bg-gray-100 p-4 text-center">
+          For every question, choose the right answer.
+        </p>
+      </li>
+      <Formik
+        initialValues={initials}
+        onSubmit={(values) => alert(JSON.stringify(values, null, 2))}
+      >
+        {({ values }: FormikValues) => (
+          <Form>
             {data.map((question: Question) => (
               <QuestionField {...question} />
             ))}
@@ -28,9 +36,9 @@ export const Exam = () => {
             >
               <button type="submit">Submit</button>
             </li>
-          </ul>
-        </Form>
-      )}
-    </Formik>
+          </Form>
+        )}
+      </Formik>
+    </ul>
   );
 };
