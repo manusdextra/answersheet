@@ -2,7 +2,8 @@ import { FormEventHandler } from "react";
 
 export type Question = {
   id: number;
-  question: string;
+  example?: boolean;
+  question: string | boolean;
   rightanswer: string;
   wronganswers: string[];
   allAnswers?: string[];
@@ -21,4 +22,9 @@ export type ExamAnswers = { [key: string]: string };
 export type FormProps = {
   className?: string;
   data: Exam;
+};
+
+export type Reading1 = {
+  text: string;
+  questions: Question[];
 };
