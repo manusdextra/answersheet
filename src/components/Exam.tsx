@@ -1,4 +1,4 @@
-import { Field, Form, Formik, FormikValues } from "formik";
+import { Form, Formik, FormikValues } from "formik";
 import type { Question, ExamAnswers } from "../declarations.d";
 import { mockexam } from "../assets/mockexam";
 import { QuestionField } from "./QuestionField";
