@@ -1,4 +1,4 @@
-import type { Question, Reading1 } from "../declarations.d";
+import type { Reading1 } from "../declarations.d";
 
 export const readingPart1: Reading1 = {
   text: `
@@ -9,55 +9,46 @@ Nowadays we are all […] pressure to increase the amount of work we can achieve
     {
       id: 0,
       example: true,
-      question: false,
       rightanswer: "under",
       wronganswers: ["in", "at", "with"],
     },
     {
       id: 1,
-      question: false,
       rightanswer: "As a result",
       wronganswers: ["Therefore", "Owing", "Due"],
     },
     {
       id: 2,
-      question: false,
       rightanswer: "for",
       wronganswers: ["through", "out", "in"],
     },
     {
       id: 3,
-      question: false,
       rightanswer: "solve",
       wronganswers: ["answer", "explain", "settle"],
     },
     {
       id: 4,
-      question: false,
       rightanswer: "make",
       wronganswers: ["get", "do", "have"],
     },
     {
       id: 5,
-      question: false,
       rightanswer: "look up to",
       wronganswers: ["get through to", "catch up with", "go out with"],
     },
     {
       id: 6,
-      question: false,
       rightanswer: "run",
       wronganswers: ["walk", "race", "hike"],
     },
     {
       id: 7,
-      question: false,
       rightanswer: "in hand",
       wronganswers: ["on hand", "by hand", "with hand"],
     },
     {
       id: 8,
-      question: false,
       rightanswer: "dealing with",
       wronganswers: ["A keeping in", "setting out", "taking on"],
     },

@@ -3,7 +3,7 @@ import { FormEventHandler } from "react";
 export type Question = {
   id: number;
   example?: boolean;
-  question: string | boolean;
+  question?: string;
   rightanswer: string;
   wronganswers: string[];
   allAnswers?: string[];
