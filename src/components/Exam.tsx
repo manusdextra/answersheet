@@ -1,12 +1,12 @@
 import { Form, Formik, FormikValues } from "formik";
 import type { Question, ExamAnswers } from "../declarations.d";
-import { mockexam } from "../assets/mockexam";
+import { loremIpsum, readingPart1 } from "../assets/mockexam";
 import { QuestionField } from "./QuestionField";
 
-const data = mockexam;
+const data = loremIpsum;
 
 let initials: ExamAnswers = {};
-for (const x of data) {
+for (const x of data.questions) {
   initials[`question ${x.id}`] = "";
 }
 
@@ -21,13 +21,25 @@ export const Exam = () => {
           For every question, choose the right answer.
         </p>
       </li>
+      {data.text ? (
+        <li
+          key="text"
+          className="m-auto my-4 w-4/5 rounded-md bg-slate-50 p-1 shadow-lg md:w-3/5"
+        >
+          <p className="text-md rounded-t-md bg-gray-100 p-4 text-center">
+            {data.text}
+          </p>
+        </li>
+      ) : (
+        ""
+      )}
       <Formik
         initialValues={initials}
         onSubmit={(values) => alert(JSON.stringify(values, null, 2))}
       >
         {({ values }: FormikValues) => (
           <Form>
-            {data.map((question: Question) => (
+            {data.questions.map((question: Question) => (
               <QuestionField {...question} />
             ))}
             <li
