@@ -1,16 +1,13 @@
 import { Form, Formik, FormikValues } from "formik";
-import type { Question, ExamAnswers } from "../declarations.d";
-import { loremIpsum, readingPart1 } from "../assets/mockexam";
+import type { Reading1, Question, ExamAnswers } from "../declarations.d";
 import { QuestionField } from "./QuestionField";
 
-const data = loremIpsum;
+export const Exam = (data: Reading1) => {
+  let initials: ExamAnswers = {};
+  for (const x of data.questions) {
+    initials[`question ${x.id}`] = "";
+  }
 
-let initials: ExamAnswers = {};
-for (const x of data.questions) {
-  initials[`question ${x.id}`] = "";
-}
-
-export const Exam = () => {
   return (
     <ul>
       <li
