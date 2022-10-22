@@ -1,6 +1,7 @@
 import { Form, Formik, FormikValues } from "formik";
 import type { Reading1, Question, ExamAnswers } from "../declarations.d";
 import { QuestionField } from "./QuestionField";
+import { TextCard } from "./TextCard";
 
 export const Exam = (data: Reading1) => {
   let initials: ExamAnswers = {};
@@ -10,24 +11,11 @@ export const Exam = (data: Reading1) => {
 
   return (
     <ul>
-      <li
+      <TextCard
         key="introduction"
-        className="m-auto my-4 w-4/5 rounded-md bg-slate-50 p-1 shadow-lg md:w-3/5"
-      >
-        <p className="text-md rounded-t-md bg-gray-100 p-4 text-center">
-          For every question, choose the right answer.
-        </p>
-      </li>
-      {data.text && (
-        <li
-          key="text"
-          className="m-auto my-4 w-4/5 rounded-md bg-slate-50 p-1 shadow-lg md:w-3/5"
-        >
-          <p className="text-md rounded-t-md bg-gray-100 p-4 text-center">
-            {data.text}
-          </p>
-        </li>
-      )}
+        content="For every question, choose the right answer."
+      />
+      {data.text && <TextCard key="text" content={data.text} />}
       <Formik
         initialValues={initials}
         onSubmit={(values) => alert(JSON.stringify(values, null, 2))}

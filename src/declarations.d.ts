@@ -24,6 +24,11 @@ export type FormProps = {
   data: Exam;
 };
 
+export type TextCardProps = {
+  key: string;
+  content: string;
+};
+
 export type Reading1 = {
   text: string;
   questions: Question[];
