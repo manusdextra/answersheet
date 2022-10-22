@@ -1,6 +1,16 @@
 import { Field } from "formik";
 import type { Question } from "../declarations.d";
 
+const AnswerButtons = (props: { columns: number; children: JSX.Element[] }) => {
+  return (
+    <ul
+      className={`col-auto grid grid-flow-row gap-1 text-slate-700 grid-cols-${props.columns}`}
+    >
+      {props.children}
+    </ul>
+  );
+};
+
 export const QuestionField = (props: Question) => {
   return (
     <li
@@ -10,7 +20,7 @@ export const QuestionField = (props: Question) => {
     >
       <fieldset>
         {props.question && <legend className="p-4">{props.question}</legend>}
-        <ul className="grid grid-flow-row grid-cols-1 gap-1 text-slate-700 md:grid-cols-2">
+        <AnswerButtons columns={4}>
           {[...props.wronganswers, props.rightanswer].map((answer, index) => (
             <li key={`q${props.id}-a${index}`} className="flex">
               <Field
@@ -28,7 +38,7 @@ export const QuestionField = (props: Question) => {
               </label>
             </li>
           ))}
-        </ul>
+        </AnswerButtons>
       </fieldset>
     </li>
   );
