@@ -21,7 +21,7 @@ export const Exam = () => {
           For every question, choose the right answer.
         </p>
       </li>
-      {data.text ? (
+      {data.text && (
         <li
           key="text"
           className="m-auto my-4 w-4/5 rounded-md bg-slate-50 p-1 shadow-lg md:w-3/5"
@@ -30,8 +30,6 @@ export const Exam = () => {
             {data.text}
           </p>
         </li>
-      ) : (
-        ""
       )}
       <Formik
         initialValues={initials}
