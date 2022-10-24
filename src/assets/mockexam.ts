@@ -50,7 +50,7 @@ Nowadays we are all […] pressure to increase the amount of work we can achieve
     {
       id: 8,
       rightanswer: "dealing with",
-      wronganswers: ["A keeping in", "setting out", "taking on"],
+      wronganswers: ["keeping in", "setting out", "taking on"],
     },
   ],
 };
