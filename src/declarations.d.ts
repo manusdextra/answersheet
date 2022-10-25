@@ -1,13 +1,34 @@
 import { FormEventHandler } from "react";
 
+export type LevelTest = {
+  questions: MultipleChoice[];
+};
+
+export type Reading1 = {
+  text: string;
+  questions: MultipleChoice[];
+};
+
+export type Reading2 = {
+  text: string;
+  questions: TextInput[];
+};
+
 export type Question = {
   id: number;
   example?: boolean;
   question?: string;
   rightanswer: string;
-  wronganswers: string[];
-  allAnswers?: string[];
 };
+
+export interface MultipleChoice extends Question {
+  wronganswers?: string[];
+  allAnswers?: string[];
+}
+
+export interface TextInput extends Question {
+  alternatives?: string[];
+}
 
 export type Answer = {
   key: string;
@@ -27,9 +48,4 @@ export type FormProps = {
 export type TextCardProps = {
   key: string;
   content: string;
-};
-
-export type Reading1 = {
-  text: string;
-  questions: Question[];
 };
