@@ -1,8 +1,8 @@
-import type { Reading1 } from "../declarations.d";
+import type { LevelTest, Reading1, Reading2 } from "../declarations.d";
 
 export const readingPart1: Reading1 = {
   text: `
-Nowadays we are all […] pressure to increase the amount of work we can achieve in the shortest possible time. […] of this we may spend time looking […] short-cuts in our working lives. However, many of these time-saving measures may actually cause more problems than they […].
+  Nowadays we are all […] pressure to increase the amount of work we can achieve in the shortest possible time. […] of this we may spend time looking […] short-cuts in our working lives. However, many of these time-saving measures may actually cause more problems than they […].
   Some organisations seem to expect their staff to work more than the usual eight or nine hours a day, without recognising the fact that tiredness causes people to […] silly mistakes. We all tend to […] those who can multi-task because we think they are working hard—but do all the electronic gadgets they use make them more efficient in the long […]? It's possible they actually distract them from the task […] and lead to a loss of concentration. So maybe […] every email or answering every mobile phone call immediately is not the most efficient use of our time.
 `,
   questions: [
@@ -55,8 +55,27 @@ Nowadays we are all […] pressure to increase the amount of work we can achieve
   ],
 };
 
-export const loremIpsum: Reading1 = {
-  text: "",
+export const readingPart2: Reading2 = {
+  text: `
+  We think we understand dogs, but we're often wrong about […] they're trying to "say". imagine trying to communicate […] someone who doesn't understand any of your language. Dogs find […] in this situation every day, and […] are many examples of misunderstandings.
+    As […] example of this, if a dog pants, we assume it's due to the heat. Of course, that may be true, but it could also indicate stress. […] yawning might suggest tiredness, it could also signify an attempt to calm other dogs who are acting aggressively.
+    We think a dog wags its tail because it's happy, but there may be other meanings, depending […] the position of the tail and the type of wag. […] instance, when a dog holds its tail high and stiff, it's giving a warning. A dog does […] if it thinks someone is trying to take its food, and may bite if the signal is ignored.
+    Clearly sometimes it's important to understand "dog"!
+  `,
+  questions: [
+    { id: 0, example: true, rightanswer: "for" },
+    { id: 1, rightanswer: "with" },
+    { id: 2, rightanswer: "themselves" },
+    { id: 3, rightanswer: "there" },
+    { id: 4, rightanswer: "an" },
+    { id: 5, rightanswer: "although" },
+    { id: 6, rightanswer: "on" },
+    { id: 7, rightanswer: "for" },
+    { id: 8, rightanswer: "this" },
+  ],
+};
+
+export const freestyle: LevelTest = {
   questions: [
     {
       id: 0,
