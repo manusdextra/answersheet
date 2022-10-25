@@ -1,14 +1,28 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
-import App from "./App";
+import Root from "./Root";
 import reportWebVitals from "./reportWebVitals";
+import { Exam } from "./components/Exam";
+import { readingPart1, readingPart2 } from "./assets/mockexam";
+import { ErrorPage } from "./components/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Root />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "exams/readingpart1",
+        element: <Exam {...readingPart1} />,
+      },
+      {
+        path: "exams/readingpart2",
+        element: <Exam {...readingPart2} />,
+      },
+    ],
   },
 ]);
 
