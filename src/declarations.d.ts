@@ -1,18 +1,21 @@
 import { FormEventHandler } from "react";
 
-export type LevelTest = {
-  questions: MultipleChoice[];
-};
+export interface Exam {
+  instructions: string;
+  text?: string;
+}
 
-export type Reading1 = {
-  text: string;
+export interface LevelTest extends Exam {
   questions: MultipleChoice[];
-};
+}
 
-export type Reading2 = {
-  text: string;
+export interface Reading1 extends Exam {
+  questions: MultipleChoice[];
+}
+
+export interface Reading2 extends Exam {
   questions: TextInput[];
-};
+}
 
 export type Question = {
   id: number;
