@@ -17,6 +17,10 @@ export interface Reading2 extends Exam {
   questions: TextInput[];
 }
 
+export interface Reading3 extends Exam {
+  questions: TextInput[];
+}
+
 export type Question = {
   id: number;
   example?: boolean;
@@ -30,6 +34,7 @@ export interface MultipleChoice extends Question {
 }
 
 export interface TextInput extends Question {
+  prompt?: string;
   alternatives?: string[];
 }
 

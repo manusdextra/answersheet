@@ -1,4 +1,9 @@
-import type { LevelTest, Reading1, Reading2 } from "../declarations.d";
+import type {
+  LevelTest,
+  Reading1,
+  Reading2,
+  Reading3,
+} from "../declarations.d";
 
 export const readingPart1: Reading1 = {
   instructions:
@@ -76,6 +81,27 @@ export const readingPart2: Reading2 = {
     { id: 6, rightanswer: "on" },
     { id: 7, rightanswer: "for" },
     { id: 8, rightanswer: "this" },
+  ],
+};
+
+export const readingPart3: Reading3 = {
+  instructions:
+    "Read the text below. Use the word given in capitals at the end of some of the lines to form a word that fits in the gap in the same line. There is an example at the beginning.",
+  text: `
+  People assume there is a […] between a tourist and a traveller and that "tourist" is a negative term. Is this true?
+  In general, it seems a tourist goes to a new place to have a fun, […] time, and to replace the energy used up by working in a […] job. A traveller wanders from place to place driven on by a deep […] about everything new and the desire to explore. A tourist escapes from the […] routine of everyday life seeking relaxation, whereas all a traveller wants is to be on the road. A tourist goes somewhere, is amazed, but then returns with his or her everyday life […] by the experience; a traveller continues to roam around, seeking anything that enhances his or her […] of the world. A tourist goes home but a traveller moves on, perhaps unwilling to stop anywhere permanently.
+    But could it be possible that the two are […] the same? After all, they share a pleasure in the world and an […] of the wonders in it.
+  `,
+  questions: [
+    { id: 0, example: true, prompt: "different", rightanswer: "difference" },
+    { id: 1, prompt: "enjoy", rightanswer: "enjoyable" },
+    { id: 2, prompt: "stress", rightanswer: "stressful" },
+    { id: 3, prompt: "curious", rightanswer: "curiosity" },
+    { id: 4, prompt: "bore", rightanswer: "boring" },
+    { id: 5, prompt: "change", rightanswer: "changed" },
+    { id: 6, prompt: "understand", rightanswer: "understanding" },
+    { id: 7, prompt: "actual", rightanswer: "actually" },
+    { id: 8, prompt: "appreciate", rightanswer: "appreciation" },
   ],
 };
 
