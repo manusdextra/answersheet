@@ -32,6 +32,9 @@ export const Navbar = () => {
       <NavItem link={true}>
         <Link to={`exams/readingpart2`}>Part 2</Link>
       </NavItem>
+      <NavItem link={true}>
+        <Link to={`exams/readingpart3`}>Part 3</Link>
+      </NavItem>
       <NavItem className="flex-grow">{/* flex spacer */}</NavItem>
       <NavItem>Home</NavItem>
     </ul>
