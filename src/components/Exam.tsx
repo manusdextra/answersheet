@@ -10,7 +10,7 @@ export const Exam = (data: Reading1) => {
   }
 
   return (
-    <ul>
+    <ul className="p-6">
       <TextCard
         key="introduction"
         content="For every question, choose the right answer."
