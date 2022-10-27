@@ -1,4 +1,5 @@
-import clsx from "clsx";
+import { clsx } from "clsx";
+import { sizes } from "../assets/styles";
 import { Field } from "formik";
 import type { MultipleChoice } from "../declarations.d";
 
@@ -25,7 +26,10 @@ export const QuestionField = (props: MultipleChoice) => {
     <li
       key={props.id}
       id={`body-${props.id}`}
-      className="m-auto my-4 w-4/5 rounded-md bg-slate-50 p-1 shadow-lg md:w-3/5"
+      className={clsx(
+        "m-auto my-4 rounded-md bg-slate-50 p-1 shadow-lg",
+        sizes
+      )}
     >
       <fieldset>
         {props.question && <legend className="p-4">{props.question}</legend>}
@@ -34,7 +38,7 @@ export const QuestionField = (props: MultipleChoice) => {
         Probably I just need to make the components more abstract so I can simply include whichever one is relevant
         */}
         {props.wronganswers && (
-          <AnswerButtons columns={2}>
+          <AnswerButtons columns={4}>
             {[...props.wronganswers, props.rightanswer].map((answer, index) => (
               <li key={`q${props.id}-a${index}`} className="flex">
                 <Field
