@@ -1,6 +1,7 @@
 import type { TextCardProps } from "../declarations";
 import { sizes } from "../assets/styles";
 import { clsx } from "clsx";
+import { ReactNode } from "react";
 
 export const TextCard = (props: TextCardProps) => {
   return (
@@ -11,8 +12,12 @@ export const TextCard = (props: TextCardProps) => {
         sizes
       )}
     >
-      <p className="text-md rounded-t-md bg-gray-100 p-4 text-center">
-        {props.content}
+      <p className="text-md rounded-t-md bg-gray-100 p-4">
+        {props.content.map(
+          (para: string): ReactNode => (
+            <p className="py-2">{para}</p>
+          )
+        )}
       </p>
     </li>
   );

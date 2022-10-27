@@ -2,7 +2,7 @@ import { FormEventHandler } from "react";
 
 export interface Exam {
   instructions: string;
-  text?: string;
+  text?: string[];
 }
 
 export interface LevelTest extends Exam {
@@ -55,5 +55,5 @@ export type FormProps = {
 
 export type TextCardProps = {
   key: string;
-  content: string;
+  content: string[];
 };

@@ -13,7 +13,7 @@ export const Exam = (data: Reading1) => {
 
   return (
     <ul className="p-6">
-      <TextCard key="introduction" content={data.instructions} />
+      <TextCard key="introduction" content={[data.instructions]} />
       {data.text && <TextCard key="text" content={data.text} />}
       <Formik
         initialValues={initials}
