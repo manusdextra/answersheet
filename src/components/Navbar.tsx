@@ -36,7 +36,9 @@ export const Navbar = () => {
         <Link to={`exams/readingpart3`}>Part 3</Link>
       </NavItem>
       <NavItem className="flex-grow">{/* flex spacer */}</NavItem>
-      <NavItem>Home</NavItem>
+      <NavItem>
+        <Link to={"/"}>Home</Link>
+      </NavItem>
     </ul>
   );
 };
