@@ -41,7 +41,7 @@ export const QuestionField = (props: MultipleChoice) => {
           <div className="flex-grow-0 place-self-center p-4">
             {props.id + 1}
           </div>
-          {props.wronganswers && (
+          {props.wronganswers ? (
             <AnswerButtons columns={4}>
               {[...props.wronganswers, props.rightanswer].map(
                 (answer, index) => (
@@ -63,6 +63,14 @@ export const QuestionField = (props: MultipleChoice) => {
                 )
               )}
             </AnswerButtons>
+          ) : (
+            <>
+              <Field
+                className="text-md flex-grow rounded-md bg-slate-200 p-4 text-center font-medium ring-inset peer-checked:bg-slate-400 peer-hover:ring-4 peer-hover:ring-slate-400 peer-active:bg-slate-400"
+                name={`question ${props.id}`}
+                type="text"
+              />
+            </>
           )}
         </div>
       </fieldset>
