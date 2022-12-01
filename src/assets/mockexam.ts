@@ -17,47 +17,47 @@ export const readingPart1: Reading1 = {
       id: 0,
       example: true,
       rightanswer: "under",
-      wronganswers: ["in", "at", "with"],
+      options: ["under", "in", "at", "with"],
     },
     {
       id: 1,
       rightanswer: "As a result",
-      wronganswers: ["Therefore", "Owing", "Due"],
+      options: ["As a result", "Therefore", "Owing", "Due"],
     },
     {
       id: 2,
       rightanswer: "for",
-      wronganswers: ["through", "out", "in"],
+      options: ["for", "through", "out", "in"],
     },
     {
       id: 3,
       rightanswer: "solve",
-      wronganswers: ["answer", "explain", "settle"],
+      options: ["solve", "answer", "explain", "settle"],
     },
     {
       id: 4,
       rightanswer: "make",
-      wronganswers: ["get", "do", "have"],
+      options: ["make", "get", "do", "have"],
     },
     {
       id: 5,
       rightanswer: "look up to",
-      wronganswers: ["get through to", "catch up with", "go out with"],
+      options: ["look up to", "get through to", "catch up with", "go out with"],
     },
     {
       id: 6,
       rightanswer: "run",
-      wronganswers: ["walk", "race", "hike"],
+      options: ["run", "walk", "race", "hike"],
     },
     {
       id: 7,
       rightanswer: "in hand",
-      wronganswers: ["on hand", "by hand", "with hand"],
+      options: ["in hand", "on hand", "by hand", "with hand"],
     },
     {
       id: 8,
       rightanswer: "dealing with",
-      wronganswers: ["keeping in", "setting out", "taking on"],
+      options: ["dealing with", "keeping in", "setting out", "taking on"],
     },
   ],
 };
@@ -113,7 +113,8 @@ export const freestyle: LevelTest = {
       question:
         "Ipsum ea impedit rerum commodi voluptas architecto id voluptates. ",
       rightanswer: "Aut minus consequuntur porro dicta quos.",
-      wronganswers: [
+      options: [
+        "Aut minus consequuntur porro dicta quos.",
         "Non accusamus et tenetur repudiandae eos nobis porro si",
         "Libero rerum sunt voluptatem rerum expedita odit.",
         "Maiores sequi sit et nisi sequi consectetur.",
@@ -124,7 +125,8 @@ export const freestyle: LevelTest = {
       question:
         "Velit qui voluptatem aperiam. Laudantium dolorem voluptatum non nesciunt. ",
       rightanswer: "voluptatum non nesciunt.",
-      wronganswers: [
+      options: [
+        "voluptatum non nesciunt.",
         "Ex quis accusamus eveniet inventore non. ",
         "Vitae non ipsum sunt quos quis amet aut.",
         "Ipsum ea impedit rerum commodi voluptas architecto id voluptates. ",
@@ -135,7 +137,8 @@ export const freestyle: LevelTest = {
       question:
         "Vitae non ipsum sunt quos quis amet aut. Aspernatur quia id pariatur non eum et unde veritatis. ",
       rightanswer: "Laudantium dolorem ",
-      wronganswers: [
+      options: [
+        "Laudantium dolorem ",
         "Voluptas perferendis eos animi maiores qui",
         "Corporis eveniet ut dolor libero eos sed dolores quia. ",
         "Voluptatem quia minus temporibus molestias quo.",
