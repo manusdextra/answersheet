@@ -50,7 +50,6 @@ export const QuestionField = (props: MultipleChoice) => {
                       type="radio"
                       className="peer flex-shrink appearance-none"
                       id={`q${props.id}-a${index}`}
-                      value={`answer ${index}`}
                       name={`question ${props.id}`}
                     />
                     <label
