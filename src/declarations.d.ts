@@ -57,3 +57,8 @@ export type TextCardProps = {
   content: string[];
   children?: JSXElement;
 };
+
+export type LoginValues = {
+  email: string;
+  passphrase: string;
+};

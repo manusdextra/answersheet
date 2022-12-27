@@ -5,6 +5,7 @@ import "./index.css";
 import Root from "./Root";
 import reportWebVitals from "./reportWebVitals";
 import { Exam } from "./components/Exam";
+import { Login } from "./components/Login";
 import { readingPart1, readingPart2, readingPart3 } from "./assets/mockexam";
 import { ErrorPage } from "./components/ErrorPage";
 
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "exams/readingpart3",
         element: <Exam {...readingPart3} />,
+      },
+      {
+        path: "login",
+        element: <Login />,
       },
     ],
   },

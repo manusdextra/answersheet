@@ -37,6 +37,9 @@ export const Navbar = () => {
       </NavItem>
       <NavItem className="flex-grow">{/* flex spacer */}</NavItem>
       <NavItem>
+        <Link to={"login"}>Login</Link>
+      </NavItem>
+      <NavItem>
         <Link to={"/"}>Home</Link>
       </NavItem>
     </ul>
