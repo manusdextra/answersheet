@@ -25,12 +25,11 @@ export type Question = {
   id: number;
   example?: boolean;
   question?: string;
-  rightanswer: string;
+  rightanswer?: string;
 };
 
 export interface MultipleChoice extends Question {
-  wronganswers?: string[];
-  allAnswers?: string[];
+  options?: string[];
 }
 
 export interface TextInput extends Question {
@@ -56,4 +55,5 @@ export type FormProps = {
 export type TextCardProps = {
   key: string;
   content: string[];
+  children?: JSXElement;
 };
