@@ -1,11 +1,11 @@
 import type {
   LevelTest,
-  Reading1,
-  Reading2,
-  Reading3,
+  MultiCloze,
+  OpenCloze,
+  KeyWordTransformation,
 } from "../declarations.d";
 
-export const readingPart1: Reading1 = {
+export const readingPart1: MultiCloze = {
   instructions:
     "Read the text below and decide which answer best fits each gap. There is an example at the beginning.",
   text: [
@@ -62,7 +62,7 @@ export const readingPart1: Reading1 = {
   ],
 };
 
-export const readingPart2: Reading2 = {
+export const readingPart2: OpenCloze = {
   instructions:
     "Read the text below and think of the word which best fits each gap. Use only one word in each gap. There is an example at the beginning.",
   text: [
@@ -84,7 +84,7 @@ export const readingPart2: Reading2 = {
   ],
 };
 
-export const readingPart3: Reading3 = {
+export const readingPart3: KeyWordTransformation = {
   instructions:
     "Read the text below. Use the word given in capitals at the end of some of the lines to form a word that fits in the gap in the same line. There is an example at the beginning.",
   text: [

@@ -9,15 +9,15 @@ export interface LevelTest extends Exam {
   questions: MultipleChoice[];
 }
 
-export interface Reading1 extends Exam {
+export interface MultiCloze extends Exam {
   questions: MultipleChoice[];
 }
 
-export interface Reading2 extends Exam {
+export interface OpenCloze extends Exam {
   questions: TextInput[];
 }
 
-export interface Reading3 extends Exam {
+export interface KeyWordTransformation extends Exam {
   questions: TextInput[];
 }
 

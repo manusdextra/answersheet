@@ -1,11 +1,11 @@
 import { Form, Formik, FormikValues } from "formik";
-import type { Reading1, Question, ExamAnswers } from "../declarations.d";
+import type { MultiCloze, Question, ExamAnswers } from "../declarations.d";
 import { QuestionField } from "./QuestionField";
 import { TextCard } from "./TextCard";
 import { sizes } from "../assets/styles";
 import { clsx } from "clsx";
 
-export const Exam = (data: Reading1) => {
+export const Exam = (data: MultiCloze) => {
   let initials: ExamAnswers = {};
   for (const x of data.questions) {
     initials[`question ${x.id}`] = "";
