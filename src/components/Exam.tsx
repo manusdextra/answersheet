@@ -5,36 +5,34 @@ import { TextCard } from "./TextCard";
 import { sizes } from "../assets/styles";
 import { clsx } from "clsx";
 
-export const Exam = (data: MultiCloze) => {
+export const Exam = (examPart: MultiCloze) => {
   let initials: ExamAnswers = {};
-  for (const x of data.questions) {
-    initials[`question ${x.id}`] = "";
+  for (const x of examPart.questions) {
+    initials[`q${x.id}`] = "";
   }
 
   return (
     <ul className="p-6">
-      <TextCard key="introduction" content={[data.instructions]} />
-      {data.text && <TextCard key="text" content={data.text} />}
+      <TextCard key="introduction" content={[examPart.instructions]} />
+      {examPart.text && <TextCard key="text" content={examPart.text} />}
       <Formik
         initialValues={initials}
         onSubmit={(values) => alert(JSON.stringify(values, null, 2))}
       >
-        {({ values }: FormikValues) => (
-          <Form>
-            {data.questions.map((question: Question) => (
-              <QuestionField {...question} />
-            ))}
-            <li
-              key="submit"
-              className={clsx(
-                "m-auto my-12 rounded-md bg-slate-50 p-1 py-6 text-center shadow-lg",
-                sizes
-              )}
-            >
-              <button type="submit">Submit</button>
-            </li>
-          </Form>
-        )}
+        <Form>
+          {examPart.questions.map((question: Question) => (
+            <QuestionField {...question} />
+          ))}
+          <li
+            key="submit"
+            className={clsx(
+              "m-auto my-12 rounded-md bg-slate-50 p-1 py-6 text-center shadow-lg",
+              sizes
+            )}
+          >
+            <button type="submit">Submit</button>
+          </li>
+        </Form>
       </Formik>
     </ul>
   );
